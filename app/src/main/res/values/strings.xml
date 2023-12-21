@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="username">UserName</string>
+    <string name="username_hint">UserName</string>
+    <string name="password">Password</string>
+    <string name="password_hint">Password</string>
+    <string name="register">Register</string>
+</resources>
