@@ -13,12 +13,10 @@
         android:theme="@style/Theme.Tester"
         tools:targetApi="31">
         <activity
-            android:name=".FacebookLogin"
-            android:exported="true">
-
-        </activity>
+            android:name=".settings.Settings"
+            android:exported="false" />
         <activity
-            android:name=".CalculatorActivity"
+            android:name=".MainScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,9 +25,17 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".facebook_post"
+            android:exported="true" />
+        <activity
+            android:name=".FacebookLogin"
+            android:exported="true" />
+        <activity
+            android:name=".CalculatorActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

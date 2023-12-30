@@ -1,10 +1,8 @@
-package com.example.Calculator;
+package com.example.tester;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
-import com.example.tester.R;
 
 public class MainActivity extends AppCompatActivity {
 

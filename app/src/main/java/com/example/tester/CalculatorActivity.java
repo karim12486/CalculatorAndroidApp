@@ -1,4 +1,4 @@
-package com.example.Calculator;
+package com.example.tester;
 
 import static android.widget.Toast.makeText;
 
@@ -8,8 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
-import com.example.tester.R;
+import android.widget.Toast;
 
 public class CalculatorActivity extends AppCompatActivity {
 
@@ -20,6 +19,7 @@ public class CalculatorActivity extends AppCompatActivity {
     boolean isOperatorClick = false;
     boolean isEqualClick = false;
     boolean isDotClick = false;
+    static String calculator_args = "android";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,8 @@ public class CalculatorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_calculator);
         button7 = findViewById(R.id.button_7);
         screenTextView = findViewById(R.id.screenTextView);
-
+        String hello = getIntent().getStringExtra(calculator_args);
+        screenTextView.setText(hello);
     }
     public void onDigitClick(View view) {
         if (view instanceof Button) {
@@ -75,6 +76,8 @@ public class CalculatorActivity extends AppCompatActivity {
         if (view instanceof Button){
             Button button = ((Button) view);
             String RHS = screenTextView.getText().toString();
+            if (RHS.isEmpty())
+                return;
             if (!LHS.isEmpty()) {
                 LHS = calculate(LHS, operation, RHS);
                 screenTextView.setText(LHS);
@@ -97,10 +100,10 @@ public class CalculatorActivity extends AppCompatActivity {
                 break;
             case "/":
                 if (right == 0){
-                    //Handle message for user
-//                    Toast.makeText(this,"You can't divide by 0!",Toast.LENGTH_LONG).show();
+//                    Handle message for user
+                    Toast.makeText(this,"You can't divide by 0!",Toast.LENGTH_LONG).show();
 
-                    return "u dum fuck, HAYAAA";
+//                    return "u dum fuck, HAYAAA";
                 }
                 result = left / right;
                 break;

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".facebook_post">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/pp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/pp"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.13" />
+
+    <TextView
+        android:id="@+id/name_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:text="John Smith"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/pp"
+        app:layout_constraintTop_toTopOf="@id/pp" />
+
+    <TextView
+        android:id="@+id/time_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="2 hrs"
+        android:textColor="#808080"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/pp"
+        app:layout_constraintStart_toEndOf="@id/pp" />
+
+    <ImageView
+        android:id="@+id/globe"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/globe"
+        app:layout_constraintBottom_toBottomOf="@id/time_post"
+        app:layout_constraintHeight_percent="0.02"
+        app:layout_constraintStart_toEndOf="@id/time_post"
+        app:layout_constraintTop_toBottomOf="@id/name_user"
+        app:layout_constraintWidth_percent="0.04" />
+
+    <ImageView
+        android:id="@+id/options_dots"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/options_logo"
+        app:layout_constraintBottom_toBottomOf="@id/time_post"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.03"
+        app:layout_constraintTop_toTopOf="@id/name_user"
+        app:layout_constraintWidth_percent="0.05" />
+
+    <TextView
+        android:id="@+id/post_paragraph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Buckle up, because change is coming to WordPress\nhttp://unblast.com/color-shemes"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/pp"
+        app:layout_constraintTop_toBottomOf="@id/pp" />
+
+    <ImageView
+        android:id="@+id/post_image"
+        android:layout_width="match_parent"
+        android:layout_height="395dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/pp"
+        app:layout_constraintTop_toBottomOf="@id/post_paragraph" />
+
+    <ImageView
+        android:id="@+id/like_logo"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/like_logo"
+        app:layout_constraintStart_toStartOf="@id/post_image"
+        app:layout_constraintTop_toBottomOf="@id/post_image" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/like_logo"
+        app:layout_constraintStart_toEndOf="@id/like_logo"
+        app:layout_constraintTop_toTopOf="@id/like_logo"
+
+        />
+
+
+    <TextView
+        android:id="@+id/shares"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="1 share"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/post_image" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintTop_toBottomOf="@id/like_logo">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Like"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:icon="@drawable/baseline_thumb_up_off_alt_24"
+            app:iconGravity="textStart" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Comment"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:icon="@drawable/comment"
+            app:iconGravity="textStart"
+            app:iconSize="24dp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Share"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:icon="@drawable/share"
+            app:iconGravity="textStart"
+            app:iconSize="23dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

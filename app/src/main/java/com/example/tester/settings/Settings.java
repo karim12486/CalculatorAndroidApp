@@ -1,4 +1,4 @@
-package com.example.Calculator;
+package com.example.tester.settings;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.tester.R;
 
-public class FacebookLogin extends AppCompatActivity {
+public class Settings extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_facebook_login);
+        setContentView(R.layout.activity_settings);
     }
 }
